@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Guest House — A Stay Worth Remembering</title>
+<meta name="description" content="A boutique guest house with modern luxury and warm hospitality. Book direct via WhatsApp or enquiry form.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-logo">Your Guest House</div>
+    <div class="loader-line"><i id="loaderBar"></i></div>
+    <small>Welcome</small>
+  </div>
+</div>
+<button class="totop" id="toTop" aria-label="Back to top">↑</button>
+<div class="progress" id="progress"></div>
+<header class="nav" id="nav">
+  <a href="#home" class="logo">Your Guest House</a>
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+  <nav id="menu">
+    <a href="#about">About</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#amenities">Amenities</a>
+    <a href="#location">Location</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#book" class="btn btn-sm">Book Now</a>
+  </nav>
+</header>
+
+<!-- 1. HERO -->
+<section class="hero" id="home">
+  <div class="hero-slides" id="heroSlides">
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=80')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=2000&q=80')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=2000&q=80')"></div>
+  </div>
+  <div class="hero-content" id="heroContent">
+    <p class="eyebrow pill">Modern luxury · Warm hospitality</p>
+    <h1 class="split" id="heroTitle">A Stay Worth <em>Remembering</em></h1>
+    <p class="lead">A boutique guest house where every detail is designed for your comfort.</p>
+    <div class="hero-cta">
+      <a href="#rooms" class="btn">Explore Rooms</a>
+      <a href="#gallery" class="btn btn-ghost">View Gallery</a>
+    </div>
+  </div>
+  <form class="hero-bar" id="heroBar">
+    <label>Check-in<input type="date" name="in" required></label>
+    <label>Check-out<input type="date" name="out" required></label>
+    <label>Guests<select name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select></label>
+    <button class="btn" type="submit">Check Availability</button>
+  </form>
+  <div class="dots" id="heroDots"><span class="on"></span><span></span><span></span></div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div><span>Free Wi-Fi</span><span>Breakfast Included</span><span>Free Parking</span><span>Air Conditioning</span><span>Attached Bathrooms</span><span>24/7 Support</span><span>Free Wi-Fi</span><span>Breakfast Included</span><span>Free Parking</span><span>Air Conditioning</span><span>Attached Bathrooms</span><span>24/7 Support</span></div></div>
+
+<!-- 2. ABOUT -->
+<section class="section about" id="about">
+  <div class="wrap grid-2">
+    <div class="reveal">
+      <p class="eyebrow dark">Welcome</p>
+      <h2>Your home away from home</h2>
+      <p>Nestled in a quiet corner of the city, our guest house blends contemporary design with the warmth of a family home. Each room has been thoughtfully styled, and our hosts are always on hand to help with local tips, transfers and a freshly prepared breakfast.</p>
+      <p>Whether you're travelling for a weekend escape or a longer stay, you'll find calm, comfort and genuine hospitality here.</p>
+      <ul class="stats">
+        <li><strong>5</strong><span>Unique rooms</span></li>
+        <li><strong>4.9★</strong><span>Guest rating</span></li>
+        <li><strong>24/7</strong><span>Host support</span></li>
+      </ul>
+    </div>
+    <div class="about-img reveal">
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1000&q=80" alt="Guest house lounge" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- 3. ROOMS -->
+<section class="section rooms" id="rooms">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow dark">Accommodation</p>
+      <h2>The Room Collection</h2>
+    </div>
+    <div class="room-grid" id="roomGrid"></div>
+  </div>
+</section>
+
+<!-- 4. GALLERY -->
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow dark">Gallery</p>
+      <h2>A glimpse of your stay</h2>
+    </div>
+    <div class="masonry" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- 5. AMENITIES -->
+<section class="section amenities" id="amenities">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Amenities</p>
+      <h2>Everything you need</h2>
+    </div>
+    <div class="amen-grid">
+      <div class="amen reveal"><span>📶</span><h3>High-speed Wi-Fi</h3><p>Fast, reliable internet throughout.</p></div>
+      <div class="amen reveal"><span>❄️</span><h3>Air Conditioning</h3><p>Individually controlled in every room.</p></div>
+      <div class="amen reveal"><span>🚗</span><h3>Free Parking</h3><p>Secure on-site parking for guests.</p></div>
+      <div class="amen reveal"><span>🛁</span><h3>Attached Bathrooms</h3><p>Private, spotless, hot water 24/7.</p></div>
+      <div class="amen reveal"><span>🍳</span><h3>Breakfast</h3><p>Freshly prepared each morning.</p></div>
+      <div class="amen reveal"><span>🧺</span><h3>Housekeeping</h3><p>Daily cleaning and fresh linen.</p></div>
+      <div class="amen reveal"><span>📺</span><h3>Smart TV</h3><p>Streaming-ready in every room.</p></div>
+      <div class="amen reveal"><span>🔒</span><h3>24/7 Security</h3><p>CCTV and attentive staff.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. LOCATION -->
+<section class="section location" id="location">
+  <div class="wrap grid-2">
+    <div class="reveal">
+      <p class="eyebrow dark">Location</p>
+      <h2>Perfectly placed</h2>
+      <p>123 Example Street, Your City. Easy access to the best the area has to offer.</p>
+      <ul class="nearby">
+        <li><span>City Centre</span><em>5 min</em></li>
+        <li><span>Airport</span><em>25 min</em></li>
+        <li><span>Railway Station</span><em>10 min</em></li>
+        <li><span>Local Market</span><em>8 min</em></li>
+        <li><span>Top Restaurants</span><em>5 min</em></li>
+      </ul>
+    </div>
+    <div class="map reveal">
+      <!-- Replace the src with your own Google Maps embed link -->
+      <iframe src="https://www.google.com/maps?q=Eiffel+Tower&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- 9. REVIEWS -->
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow dark">Guest Reviews</p>
+      <h2>Loved by our guests</h2>
+    </div>
+    <div class="review-grid">
+      <blockquote class="reveal"><div class="stars">★★★★★</div><p>“Spotless, beautifully designed and the hosts went above and beyond. We didn't want to leave.”</p><cite>— Sarah M., United Kingdom</cite></blockquote>
+      <blockquote class="reveal"><div class="stars">★★★★★</div><p>“Felt like staying with family, but with hotel-level comfort. The breakfast was a highlight.”</p><cite>— Rahul K., India</cite></blockquote>
+      <blockquote class="reveal"><div class="stars">★★★★★</div><p>“Quiet, central and so comfortable. Easily the best guest house we've stayed in.”</p><cite>— Lena & Tom, Germany</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- 7. BOOKING -->
+<section class="section book" id="book">
+  <div class="wrap narrow">
+    <div class="head reveal">
+      <p class="eyebrow">Reservations</p>
+      <h2>Plan your stay</h2>
+      <p>Send an enquiry and we'll reply within the hour — or message us directly on WhatsApp.</p>
+    </div>
+    <form id="bookForm" class="form reveal">
+      <label>Check-in<input type="date" name="in" required></label>
+      <label>Check-out<input type="date" name="out" required></label>
+      <label>Guests
+        <select name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select>
+      </label>
+      <label>Room
+        <select name="room" id="roomSelect"><option>No preference</option></select>
+      </label>
+      <label class="full">Name<input type="text" name="name" required placeholder="Your name"></label>
+      <label class="full">Message<textarea name="msg" rows="3" placeholder="Special requests (optional)"></textarea></label>
+      <button type="submit" class="btn full">Enquire on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div><strong>Your Guest House</strong><p>123 Example Street, Your City</p></div>
+    <div><p>+00 000 000 0000</p><p>hello@yourguesthouse.com</p></div>
+    <p class="copy">© <span id="yr"></span> Your Guest House. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- 8. WHATSAPP -->
+<a class="wa" id="waBtn" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.3.6 4.4 1.7 6.3L3 29l7.4-2c1.8 1 3.800 1.500 5.600 1.500 6.900 0 12.600-5.600 12.600-12.500S22.900 3 16 3zm0 22.800c-1.800 0-3.500-.5-5-1.400l-.4-.2-4.400 1.200 1.200-4.300-.3-.4a10 10 0 01-1.500-5.300c0-5.600 4.600-10.100 10.300-10.100s10.300 4.500 10.300 10.100S21.700 25.800 16 25.800zm5.600-7.500c-.3-.2-1.800-.9-2.100-1s-.5-.2-.7.200-.8 1-1 1.200-.4.200-.7.100a8.300 8.300 0 01-4.100-3.600c-.3-.6.300-.5.900-1.700.1-.2 0-.4 0-.5l-1-2.300c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3 2 3.100 4.900 4.300c1.800.8 2.500.8 3.400.7.500-.1 1.800-.7 2-1.400s.3-1.300.2-1.400-.3-.2-.6-.4z"/></svg>
+</a>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" aria-label="Close">×</button>
+  <button class="lb-prev" aria-label="Previous">‹</button>
+  <img src="" alt="">
+  <button class="lb-next" aria-label="Next">›</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
